@@ -1,7 +1,7 @@
 import type { IContext, IInterceptor } from "@nexiojs/common";
 import { createApplication } from "@nexiojs/core";
 import { ApolloGraphQLAdapter, createUnionType } from "@nexiojs/graphql";
-import { NodeAdapter } from '@nexiojs/node-adapter'
+import { NodeAdapter } from "@nexiojs/node-adapter";
 import { Post } from "./src/models/post.model";
 import { User } from "./src/models/user.model";
 import "./src/post.resolver";
@@ -30,9 +30,6 @@ createApplication({
     orphanedTypes: [User],
   }),
   compress: true,
-  responseHandler: async (event, res) => {
-    return res[0];
-  },
   interceptors: [CORSInterceptor],
   port: 3001,
 });

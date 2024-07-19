@@ -30,9 +30,6 @@ createApplication({
     adapter: NodeAdapter,
   }),
   compress: true,
-  responseHandler: async (event, res) => {
-    return res[0];
-  },
   interceptors: [CORSInterceptor],
   port: 3000,
 });

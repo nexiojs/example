@@ -8,18 +8,21 @@ dependencies:
   '@apollo/gateway':
     specifier: ^2.8.3
     version: 2.8.3(graphql@16.9.0)
+  '@nexiojs/bun-adapter':
+    specifier: ^0.0.2
+    version: 0.0.2(typescript@5.5.3)
   '@nexiojs/common':
-    specifier: ^0.0.1
-    version: 0.0.1(typescript@5.5.3)
+    specifier: ^0.0.2
+    version: 0.0.2(typescript@5.5.3)
   '@nexiojs/core':
-    specifier: ^0.0.1
-    version: 0.0.1(typescript@5.5.3)
+    specifier: ^0.0.2
+    version: 0.0.2(typescript@5.5.3)
   '@nexiojs/graphql':
-    specifier: ^0.0.1
-    version: 0.0.1(@apollo/gateway@2.8.3)(@apollo/server@4.10.4)(@apollo/subgraph@2.8.3)(graphql@16.9.0)(typescript@5.5.3)
+    specifier: ^0.0.2
+    version: 0.0.2(@apollo/gateway@2.8.3)(@apollo/server@4.10.4)(@apollo/subgraph@2.8.3)(graphql@16.9.0)(typescript@5.5.3)
   '@nexiojs/node-adapter':
-    specifier: ^0.0.1
-    version: 0.0.1(typescript@5.5.3)
+    specifier: ^0.0.2
+    version: 0.0.2(typescript@5.5.3)
   drizzle-orm:
     specifier: ^0.32.0
     version: 0.32.0(pg@8.12.0)
@@ -41,7 +44,7 @@ dependencies:
 
 devDependencies:
   '@types/bun':
-    specifier: latest
+    specifier: ^1.1.6
     version: 1.1.6
   concurrently:
     specifier: ^8.2.2
@@ -430,8 +433,16 @@ packages:
     resolution: {integrity: sha512-CtzORUwWTTOTqfVtHaKRJ0I1kNQd1bpn3sUh8I3nJDVY+5/M/Oe1DnEWzPQvqq/xPIIkzzzIP7mfCoAjFRvDhg==}
     dev: false
 
-  /@nexiojs/common@0.0.1(typescript@5.5.3):
-    resolution: {integrity: sha512-vw30emgRn0pSde5GcP6BMDEQDAt1sHGvsF3LC48+YM9pXJzaAfRaNJ2gLIz6yeud4zIdsoN9MwMRndG+KEIMPA==}
+  /@nexiojs/bun-adapter@0.0.2(typescript@5.5.3):
+    resolution: {integrity: sha512-2NQR9H8elS6pwNQTYahGUht+bF6qObPBwfnKrQP6hP9RrTHd1FDAWm3oc6DmTTuOnDvmtyY0UlGeXSidrPxqvQ==}
+    dependencies:
+      '@nexiojs/common': 0.0.2(typescript@5.5.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
+  /@nexiojs/common@0.0.2(typescript@5.5.3):
+    resolution: {integrity: sha512-pIsOlIng17UM0hN6thAPXAEPpxHrrhgCUu/fMyp5XLNmKa8xWCEe9zbnsB3tQBSed/N2Fd3Gx/Vn4uOTvjI02A==}
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
@@ -441,18 +452,18 @@ packages:
       typescript: 5.5.3
     dev: false
 
-  /@nexiojs/core@0.0.1(typescript@5.5.3):
-    resolution: {integrity: sha512-fSHu4JIV+sAZW33G2Eemb4xTqQZRRltneQRJ6bZMWjdhDMtqKCM1AXLUfmdj1NGu5EpazGhQW6gcWdNTyUagJA==}
+  /@nexiojs/core@0.0.2(typescript@5.5.3):
+    resolution: {integrity: sha512-9k8AjzpPuQ/wOfHBFkdNGU0KQkEMHUSqSNgF9FTZIeWatmu9gdhLo2DWJmlbnWpcnThhq9ZzvTFKZaPufVbU0Q==}
     dependencies:
-      '@nexiojs/common': 0.0.1(typescript@5.5.3)
+      '@nexiojs/common': 0.0.2(typescript@5.5.3)
       path-to-regexp: 7.1.0
       reflect-metadata: 0.2.2
     transitivePeerDependencies:
       - typescript
     dev: false
 
-  /@nexiojs/graphql@0.0.1(@apollo/gateway@2.8.3)(@apollo/server@4.10.4)(@apollo/subgraph@2.8.3)(graphql@16.9.0)(typescript@5.5.3):
-    resolution: {integrity: sha512-kiTD73+JabDb9CHK/jvtLc4VCqRghdwrOHBm3zL8XBZvqWZT6gmWQDfTbmGcA+GmK2NLK77JZZ77y6qyNhLFGg==}
+  /@nexiojs/graphql@0.0.2(@apollo/gateway@2.8.3)(@apollo/server@4.10.4)(@apollo/subgraph@2.8.3)(graphql@16.9.0)(typescript@5.5.3):
+    resolution: {integrity: sha512-t0R5cn+CbdI0eaZi/n2mRHOip/Hii3zV8F+a2ux32syUQbefRuiqhzUAZhyj3qsD5KCx3EbRZiWjA6Pk9pMiUg==}
     peerDependencies:
       '@apollo/gateway': ^2.8.3
       '@apollo/server': ^4.10.4
@@ -465,8 +476,8 @@ packages:
       '@graphql-tools/merge': 9.0.4(graphql@16.9.0)
       '@graphql-tools/schema': 10.0.4(graphql@16.9.0)
       '@graphql-tools/utils': 10.3.2(graphql@16.9.0)
-      '@nexiojs/common': 0.0.1(typescript@5.5.3)
-      '@nexiojs/core': 0.0.1(typescript@5.5.3)
+      '@nexiojs/common': 0.0.2(typescript@5.5.3)
+      '@nexiojs/core': 0.0.2(typescript@5.5.3)
       graphql: 16.9.0
       graphql-tag: 2.12.6(graphql@16.9.0)
       lodash.merge: 4.6.2
@@ -475,10 +486,10 @@ packages:
       - typescript
     dev: false
 
-  /@nexiojs/node-adapter@0.0.1(typescript@5.5.3):
-    resolution: {integrity: sha512-7lQQoRHmGl5KxL/lBarBFiECHWgqzJAB15VSQWImWF+hUIIqwFhRGU25wkCi5VuZKCUwbf4RoC2eIIPqoGrLDw==}
+  /@nexiojs/node-adapter@0.0.2(typescript@5.5.3):
+    resolution: {integrity: sha512-xQ5wBojmBJoqSDm6095T/KvNCgKy0v+r7iSpcdSuKBfGwudIe43WBwCCdQazeXhwk1JqAeu6tIAW+eerJ5nm3Q==}
     dependencies:
-      '@nexiojs/common': 0.0.1(typescript@5.5.3)
+      '@nexiojs/common': 0.0.2(typescript@5.5.3)
     transitivePeerDependencies:
       - typescript
     dev: false

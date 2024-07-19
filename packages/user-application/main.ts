@@ -22,9 +22,6 @@ createApplication({
     version: "v2.3",
   }),
   compress: true,
-  responseHandler: async (event, res) => {
-    return res[0];
-  },
   interceptors: [CORSCORSInterceptor],
   port: 3002,
 });
